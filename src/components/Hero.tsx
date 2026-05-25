@@ -38,7 +38,7 @@ export default function Hero() {
           {/* High-Resolution Mecca Background behind content with elegant overlay */}
           <div className="absolute inset-0 z-0">
             <img
-              src={heroData.meccaImage || "/src/assets/images/mecca_hero_banner_1779350890761.png"}
+              src={heroData.meccaImage || "/images/mecca_hero_banner_1779350890761.png"}
               alt="Masjid al-Haram Mecca"
               className="w-full h-full object-cover object-center opacity-30 select-none pointer-events-none"
               referrerPolicy="no-referrer"

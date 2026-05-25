@@ -92,7 +92,7 @@ export default function Testimonials() {
           {/* Background image visual of Madinah Green Dome */}
           <div className="absolute inset-0 z-0 select-none pointer-events-none">
             <img
-              src="/src/assets/images/madinah_banner_1779350908562.png"
+              src="/images/madinah_banner_1779350908562.png"
               alt="Masjid an-Nabawi Madinah"
               className="w-full h-full object-cover object-center opacity-25"
               referrerPolicy="no-referrer"
