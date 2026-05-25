@@ -24,7 +24,7 @@
     "priceLabel": "Mulai Dari Hanya",
     "priceValue": "Rp 28.5 Jt",
     "priceSub": "/ porsi pax",
-    "meccaImage": "/src/assets/images/mecca_hero_banner_1779350890761.png",
+    "meccaImage": "/src/assets/images/madinah_banner_1779350908562.png",
     "btnPackagesText": "Lihat Pilihan Paket",
     "btnConsultText": "Konsultasi WA",
     "waMessage": "Assalamualaikum Admin Al-Haramain Umrah, saya berkunjung ke website Anda dan ingin bertanya mengenai jadwal pendaftaran paket Umrah terdekat. Mohon bimbingannya.",
@@ -243,42 +243,6 @@
       ],
       "quotaTotal": 30,
       "seatsRemaining": 3
-    },
-    {
-      "id": "pkg-1779684890577",
-      "name": "Paket Umrah Baru",
-      "subtitle": "Deskripsi paket umrah yang menarik...",
-      "badge": "Hemat",
-      "durationDays": 9,
-      "priceQuad": 28000000,
-      "priceTriple": 30000000,
-      "priceDouble": 32000000,
-      "departureMonth": "September 2026",
-      "departureDate": "10 September 2026",
-      "airline": "Batik Air (Direct Jeddah)",
-      "airlineLogo": "✈️",
-      "meccaHotel": "Hotel Bintang 5 Makkah",
-      "meccaHotelStars": 5,
-      "meccaHotelDistance": "100 meter",
-      "madinahHotel": "Hotel Bintang 4 Madinah",
-      "madinahHotelStars": 4,
-      "madinahHotelDistance": "150 meter",
-      "highlights": [
-        "Penerbangan Langsung",
-        "Manasik Terstruktur"
-      ],
-      "inclusions": [
-        "Tiket PP",
-        "Visa Umrah",
-        "Hotel Makkah/Madinah",
-        "Catering 3x"
-      ],
-      "exclusions": [
-        "Paspor",
-        "Pengeluaran Pribadi"
-      ],
-      "quotaTotal": 40,
-      "seatsRemaining": 40
     }
   ],
   "faqData": [
