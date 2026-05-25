@@ -1,0 +1,455 @@
+{
+  "companyData": {
+    "brandName": "Al-Haramain Umrah",
+    "legalName": "PT Al-Haramain Mulia Wisata",
+    "ppiuNumber": "Kemenag RI PPIU No. 129 Tahun 2024",
+    "address": "Graha Al-Haramain, Lantai 2, Jl. Jend. Sudirman No. 45, Karet Semanggi, Jakarta Selatan, DKI Jakarta 12930",
+    "officeHours": "Senin - Jumat: 08.00 - 17.00 WIB | Sabtu: 09.00 - 13.00 WIB",
+    "phone": "021-555-8899",
+    "whatsappNumber": "6281234567890",
+    "whatsappDisplay": "+62 812-3456-7890",
+    "email": "info@alharamainumroh.co.id",
+    "socials": {
+      "instagram": "@alharamain.umrohtravel",
+      "facebook": "Al-Haramain Umrah & Haji",
+      "youtube": "Al-Haramain Wisata TV"
+    },
+    "googleMapsUrl": "https://maps.app.goo.gl/menfUXYMzkU3GZ4B8"
+  },
+  "hero": {
+    "badgeText": "Sertifikat PPIU Resmi Kemenag",
+    "title1": "Menyahut Panggilan Utama",
+    "title2": "Menuju Baitullah Premium",
+    "description": "Rasakan kekhidmatan ibadah penuh berkah bersama PT Al-Haramain Mulia Wisata. Paket safari ibadah dengan jaminan kepastian hukum, bimbingan syar'i, dan pelayanan berkualitas tinggi.",
+    "priceLabel": "Mulai Dari Hanya",
+    "priceValue": "Rp 28.5 Jt",
+    "priceSub": "/ porsi pax",
+    "meccaImage": "/src/assets/images/mecca_hero_banner_1779350890761.png",
+    "btnPackagesText": "Lihat Pilihan Paket",
+    "btnConsultText": "Konsultasi WA",
+    "waMessage": "Assalamualaikum Admin Al-Haramain Umrah, saya berkunjung ke website Anda dan ingin bertanya mengenai jadwal pendaftaran paket Umrah terdekat. Mohon bimbingannya.",
+    "trustTitle": "Garansi \"5 Pasti\" Umrah",
+    "trustBadge": "KEMENAG RI",
+    "trustSub": "Komitmen penuh untuk menjamin perjalanan yang aman, tertib, dan bernilai ibadah maksimal:",
+    "trustItems": [
+      "Pasti Travelnya Berizin Resmi PPIU (Kemenag RI PPIU No. 129 Tahun 2024)",
+      "Pasti Tiket Pesawat & Jadwal Keberangkatannya",
+      "Pasti Kamar Hotelnya Menghadap Masjidil Haram",
+      "Pasti Visa & Dokumen Perjalanannya Clear"
+    ],
+    "trustFooter": "Layanan Bintang 5",
+    "statsValue": "350 ++",
+    "statsLabel": "Jamaah Terlayani",
+    "testimonialQuote": "\"Pelayanan luar biasa rapi, dari manasik pra-keberangkatan hingga pulang ke tanah air dibimbing sangat sabar oleh muthawwif ahli.\"",
+    "testimonialAuthor": "— Ibu Hj. Siti Fatimah (Jamaah 2024)",
+    "trustLicenseTitle": "Izin Kemenag Valid",
+    "trustLicenseSub": "Kemenag RI PPIU No. 129 Tahun 2024",
+    "trustLicenseStatus": "Aktif & Terverifikasi Nasional"
+  },
+  "legality": {
+    "title1": "Ibadah Tenang, Fasilitas Nyaman &",
+    "title2": "Garansi 100% Legal",
+    "description": "Menunaikan umrah adalah safar mulia menyahut panggilan suci Allah SWT. Kami pastikan keberangkatan Anda terjamin aman secara hukum Negara dengan tingkat kepatuhan regulasi tertinggi.",
+    "fivePasti": [
+      {
+        "title": "Pasti Travel Berizin PPIU resmi",
+        "desc": "PT Al-Haramain Mulia Wisata memegang nomor izin PPIU Kemenag RI. Resmi dan legal terdaftar di Siskopatuh Kemenag.",
+        "badge": "Izin PPIU Valid"
+      },
+      {
+        "title": "Pasti Jadwal & Maskapainya",
+        "desc": "Tiket penerbangan PP Jakarta ke Arab Saudi bersertifikasi lunas cepat. Jadwal & maskapai diumumkan detail di brosur.",
+        "badge": "Direct Flight"
+      },
+      {
+        "title": "Pasti Terbang & Visanya",
+        "desc": "Menjamin visa umrah Anda terbit resmi sebelum keberangkatan dengan verifikasi data biometrik komprehensif.",
+        "badge": "Visa Terjamin"
+      },
+      {
+        "title": "Pasti Hotel Akomodasinya",
+        "desc": "Hotel yang kami gunakan sesuai dengan kontrak resmi. Jarak dekat & nyaman untuk optimalisasi ibadah.",
+        "badge": "Sesuai Kontrak"
+      },
+      {
+        "title": "Pasti Layanan Fiqihnya",
+        "desc": "Pendampingan ibadah dari tanah air hingga kepulangan dipandu oleh Muthawwif certified lulusan universitas Saudi.",
+        "badge": "Sesuai Sunnah"
+      }
+    ]
+  },
+  "umrahPackages": [
+    {
+      "id": "pkg-hemat",
+      "name": "Paket Umrah Syawal Barokah",
+      "subtitle": "Solusi ibadah khusyuk dengan harga terjangkau & akomodasi nyaman berjarak dekat.",
+      "badge": "Hemat",
+      "durationDays": 9,
+      "priceQuad": 27500000,
+      "priceTriple": 29500000,
+      "priceDouble": 31500000,
+      "departureMonth": "Syawal / Mei 2026",
+      "departureDate": "15 Mei 2026",
+      "airline": "Lion Air Premium (Direct Jeddah)",
+      "airlineLogo": "🦁",
+      "meccaHotel": "Anjum Hotel Makkah",
+      "meccaHotelStars": 5,
+      "meccaHotelDistance": "50 meter (Halaman Depan)",
+      "madinahHotel": "Rove Al Madinah Hotel",
+      "madinahHotelStars": 4,
+      "madinahHotelDistance": "100 meter ke pelataran",
+      "highlights": [
+        "Penerbangan langsung tanpa transit Jakarta-Jeddah",
+        "Bimbingan Manasik Umrah intensif 2 kali di tanah air",
+        "Muthawwif berpengalaman lulusan Universitas Islam Madinah",
+        "Air Zam-Zam 5 liter (sesuai regulasi Saudi)"
+      ],
+      "inclusions": [
+        "Tiket pesawat PP kelas ekonomi",
+        "Visa Umrah & asuransi perjalanan",
+        "Hotel di Makkah & Madinah sesuai paket",
+        "Makan 3 kali sehari menu nusantara (Catering)",
+        "Transportasi Bus Executive AC terbaru",
+        "Ziarah kota Makkah dan Madinah"
+      ],
+      "exclusions": [
+        "Pembuatan Paspor",
+        "Suntik Vaksin Meningitis (bila diwajibkan)",
+        "Pengeluaran pribadi (laundry, telepon, sim card saudi)",
+        "Kelebihan bagasi maskapai"
+      ],
+      "quotaTotal": 45,
+      "seatsRemaining": 12
+    },
+    {
+      "id": "pkg-excellent",
+      "name": "Paket Umrah Gold Excellent",
+      "subtitle": "Paket terlaris dengan akomodasi hotel bintang 5 langsung menghadap Masjidil Haram.",
+      "badge": "Excellent",
+      "durationDays": 12,
+      "priceQuad": 36900000,
+      "priceTriple": 38900000,
+      "priceDouble": 41500000,
+      "departureMonth": "Juni 2026",
+      "departureDate": "08 Juni 2026",
+      "airline": "Saudia Airlines (Direct Madinah)",
+      "airlineLogo": "✈️",
+      "meccaHotel": "Swissôtel Al Maqam Makkah",
+      "meccaHotelStars": 5,
+      "meccaHotelDistance": "0 meter (Koneksi langsung Zamzam Tower)",
+      "madinahHotel": "Pullman Zamzam Madinah",
+      "madinahHotelStars": 5,
+      "madinahHotelDistance": "50 meter ke pintu Bab Fahd",
+      "highlights": [
+        "Terbang langsung Jakarta-Madinah via Saudia Airlines",
+        "Akomodasi hotel bintang 5 di lingkaran pelataran utama Masjid",
+        "Ziarah Masjid Quba, kebun kurma, dan jabal Uhud eksklusif",
+        "Free satu set perlengkapan ibadah premium (Koper, kain ihram/mukena, batik)"
+      ],
+      "inclusions": [
+        "Tiket Saudia Airlines PP",
+        "Visa Umrah & Asuransi Kesehatan Saudi",
+        "Hotel Bintang 5 di Makkah & Madinah",
+        "Makan 3 kali sehari prasmanan menu masakan Indonesia & Internasional",
+        "Air Zam-Zam 5L & Mutawwif bersertifikat",
+        "Perlengkapan umrah lengkap & manasik di hotel berbintang"
+      ],
+      "exclusions": [
+        "Biaya kurir pengiriman perlengkapan",
+        "Kebutuhan laundry & tips muthawwif (sukarela)",
+        "Pengurusan dokumen paspor baru"
+      ],
+      "isPopular": true,
+      "quotaTotal": 40,
+      "seatsRemaining": 6
+    },
+    {
+      "id": "pkg-vip",
+      "name": "Paket Al-Haramain VIP Ridwan",
+      "subtitle": "Ibadah premium dengan kenyamanan mutlak, penerbangan Business Class, dan hotel bintang 5 VIP.",
+      "badge": "VIP Gold",
+      "durationDays": 12,
+      "priceQuad": 49500000,
+      "priceTriple": 52900000,
+      "priceDouble": 56500000,
+      "departureMonth": "Agustus 2026",
+      "departureDate": "20 Agustus 2026",
+      "airline": "Garuda Indonesia (Direct Madinah)",
+      "airlineLogo": "🦅",
+      "meccaHotel": "Fairmont Jakarta Pusat",
+      "meccaHotelStars": 5,
+      "meccaHotelDistance": "0 meter (Di dalam kompleks Abraj Al-Bait)",
+      "madinahHotel": "The Oberoi Madinah",
+      "madinahHotelStars": 5,
+      "madinahHotelDistance": "Langkah kaki sangat dekat ke pintu utama",
+      "highlights": [
+        "Penerbangan Langsung Garuda Indonesia, kenyamanan maskapai nasional terbaik",
+        "Kamar Kaaba View / Haram View (opsional request)",
+        "Muthawwif khushus bertitel S2/S3 Syariah untuk pendampingan fiqih detail",
+        "Kereta Cepat Haramain (Makkah - Madinah Express Bullet Train) kelas Business"
+      ],
+      "inclusions": [
+        "Tiket Garuda Indonesia PP (Kelas Bisnis / Ekonomi Executive)",
+        "Visa Umrah & Tasreeh Raudhah otomatis",
+        "Hotel Bintang 5 Signature Makkah & Madinah",
+        "Makan prasmanan bintang 5 (Dine-in full board hotel)",
+        "Tiket Bullet Train Haramain kelas Bisnis",
+        "Private VIP Bus untuk seluruh penjemputan",
+        "Perlengkapan Umrah VIP Koper Fiber Premium & Batik Sutra"
+      ],
+      "exclusions": [
+        "Belanja pribadi di pusat perbelanjaan Makkah/Madinah",
+        "Upgrade pelayanan kamar ke Single Room (sesuai request)"
+      ],
+      "quotaTotal": 25,
+      "seatsRemaining": 4
+    },
+    {
+      "id": "pkg-ramadan",
+      "name": "Paket Lailatul Qadar Akhir Ramadan",
+      "subtitle": "Rasakan nikmatnya berpuasa penuh dan meraih kemuliaan malam Lailatul Qadar di Makkah.",
+      "badge": "Ramadan Special",
+      "durationDays": 15,
+      "priceQuad": 59000000,
+      "priceTriple": 64000000,
+      "priceDouble": 69900000,
+      "departureMonth": "Ramadan 1447 H / Maret 2026",
+      "departureDate": "10 Maret 2026",
+      "airline": "Qatar Airways (Transit Doha)",
+      "airlineLogo": "🇶🇦",
+      "meccaHotel": "Hilton Suites Makkah",
+      "meccaHotelStars": 5,
+      "meccaHotelDistance": "70 meter ke Masjidil Haram",
+      "madinahHotel": "Haramara Al Aqeeq Hotel",
+      "madinahHotelStars": 5,
+      "madinahHotelDistance": "100 meter ke pelataran",
+      "highlights": [
+        "Mengalami 10 malam terakhir Ramadan di Makkah",
+        "Solat Tarawih & Tahajud berjamaah langsung di Masjidil Haram",
+        "Paket Buka Puasa (Iftar) & Sahur prasmanan khas nusantara disediakan lengkap",
+        "Atmosfer spiritual luar biasa setara ibadah Haji"
+      ],
+      "inclusions": [
+        "Tiket Qatar Airways PP",
+        "Visa Umrah spesifik Ramadan Saudi",
+        "Fasilitas hotel premium dekat pelataran agar mudah solat malam",
+        "Menu buka puasa & sahur harian lengkap",
+        "Mutawwif pendamping solat i'tikaf malam",
+        "Perlengkapan umrah & air Zamzam premium"
+      ],
+      "exclusions": [
+        "Overweight bagasi di atas 30kg",
+        "Pengeluaran oleh-oleh keluarga"
+      ],
+      "quotaTotal": 30,
+      "seatsRemaining": 3
+    },
+    {
+      "id": "pkg-1779684890577",
+      "name": "Paket Umrah Baru",
+      "subtitle": "Deskripsi paket umrah yang menarik...",
+      "badge": "Hemat",
+      "durationDays": 9,
+      "priceQuad": 28000000,
+      "priceTriple": 30000000,
+      "priceDouble": 32000000,
+      "departureMonth": "September 2026",
+      "departureDate": "10 September 2026",
+      "airline": "Batik Air (Direct Jeddah)",
+      "airlineLogo": "✈️",
+      "meccaHotel": "Hotel Bintang 5 Makkah",
+      "meccaHotelStars": 5,
+      "meccaHotelDistance": "100 meter",
+      "madinahHotel": "Hotel Bintang 4 Madinah",
+      "madinahHotelStars": 4,
+      "madinahHotelDistance": "150 meter",
+      "highlights": [
+        "Penerbangan Langsung",
+        "Manasik Terstruktur"
+      ],
+      "inclusions": [
+        "Tiket PP",
+        "Visa Umrah",
+        "Hotel Makkah/Madinah",
+        "Catering 3x"
+      ],
+      "exclusions": [
+        "Paspor",
+        "Pengeluaran Pribadi"
+      ],
+      "quotaTotal": 40,
+      "seatsRemaining": 40
+    }
+  ],
+  "faqData": [
+    {
+      "id": "faq-1",
+      "question": "Apakah PT Al-Haramain Mulia Wisata sudah memiliki izin resmi PPIU?",
+      "answer": "Ya, Al-Haramain Umrah beroperasi di bawah PT Al-Haramain Mulia Wisata dengan izin resmi dari Kementerian Agama Republik Indonesia (Kemenag) Penyelenggara Perjalanan Ibadah Umrah (PPIU) No. 129 Tahun 2024. Anda dapat memverifikasi legalitas kami langsung melalui aplikasi umrah resmi Kemenag (Pusaka atau Siskopatuh).",
+      "category": "umum"
+    },
+    {
+      "id": "faq-2",
+      "question": "Apa saja dokumen yang harus disiapkan untuk mendaftar?",
+      "answer": "Dokumen yang wajib disiapkan adalah: (1) Paspor asli dengan masa berlaku minimal 8 bulan sebelum keberangkatan dan nama minimal berisi 2 kata, (2) Kartu Keluarga (KK) asli & KTP untuk validasi pendaftaran, (3) Buku Nikah asli bagi pasangan suami istri, (4) Pasfoto terbaru latar belakang putih fokus wajah 80% ukuran 4x6 sebanyak 4 lembar, (5) Kartu Vaksin covid (jika diminta regulasi terbaru).",
+      "category": "dokumen"
+    },
+    {
+      "id": "faq-3",
+      "question": "Bagaimana sistem pembayaran dan pelunasannya?",
+      "answer": "Sistem pembayaran kami sangat transparan: (1) Membayar Uang Muka (DP) sebesar Rp 5.000.000 per orang untuk mengamankan seat penerbangan & hotel, (2) Pembayaran tahap dua dicicil sesuai kesepakatan, (3) Pelunasan wajib diselesaikan maksimal 45 hari sebelum tanggal jadwal keberangkatan untuk keperluan penerbitan visa dan tiket.",
+      "category": "pembayaran"
+    },
+    {
+      "id": "faq-4",
+      "question": "Di mana lokasi pembekalan (Manasik) Umrah dilakukan dan berapa kali?",
+      "answer": "Manasik Umrah dilaksanakan sebanyak 2 kali. Manasik pertama bertempat di ruang pertemuan kantor pusat kami atau hotel berbintang setaraf, membahas rukun ibadah fiqih dan tata cara ibadah praktis. Manasik kedua dilaksanakan 1 hari sebelum keberangkatan di hotel bandara transit, mencakup pembagian paspor, koper kabin, serta pemantapan praktis berpakaian ihram.",
+      "category": "umum"
+    },
+    {
+      "id": "faq-5",
+      "question": "Apakah harga paket sudah termasuk seluruh perlengkapan umrah?",
+      "answer": "Betul sekali. Harga paket yang kami cantumkan bersifat ALL-IN, di mana Anda telah mendapatkan koper fiber beroda 24 inch, tas selempang paspor, kain ihram & sabuk (untuk jamaah pria), mukena & bergo (untuk jamaah wanita), kain batik seragam esklusif, buku panduan doa saku, audio receiver guide salat, dan kantong sandal sandang.",
+      "category": "fasilitas"
+    },
+    {
+      "id": "faq-6",
+      "question": "Bagaimana jika jamaah membatalkan keberangkatan karena sakit atau urusan mendesak?",
+      "answer": "Kebijakan pembatalan mengacu pada aturan maskapai dan hotel Saudi: (1) Pembatalan setelah bayar DP dikenakan penalti biaya booking maskapai, (2) Pembatalan <30 hari dikenakan potongan 50% dari harga paket, (3) Pembatalan <14 hari dikenakan potongan hingga 85% karena seluruh tiket pesawat dan visa serta hotel berbayar mutlak non-refundable oleh provider Arab Saudi.",
+      "category": "pembayaran"
+    }
+  ],
+  "testimonialData": [
+    {
+      "id": "test-1",
+      "name": "H. Bambang Sulistyo",
+      "age": 54,
+      "city": "Surabaya",
+      "text": "Alhamdulillah sangat mabrur! Pelayanan dari PT Al-Haramain luar biasa ramah. Jarak hotel Swissôtel Al Maqam di Makkah ke masjid sangat dekat, tinggal turun lift sudah sampai pelataran tawaf. Mutawwif ustadz lulusan Madinah membimbing kami dengan sabar dari fardhu hingga sunnah.",
+      "packageTaken": "Paket Excellent Bintang 5",
+      "rating": 5,
+      "date": "Maret 2026"
+    },
+    {
+      "id": "test-2",
+      "name": "Hj. Ratna Safitri & Keluarga",
+      "age": 41,
+      "city": "Bandung",
+      "text": "Mendaftar paket Ramadan kemarin bersama suami dan 3 anak. Walau musim padat (peak season) tarawih ramai, koordinasi dari tim Al-Haramain sangat sigap. Makanan catering nusantara di hotel selalu fresh, cocok dengan lidah anak-anak. Terima kasih tak terhingga, recommended sekali!",
+      "packageTaken": "Paket Ramadan Lailatul Qadar",
+      "rating": 5,
+      "date": "April 2026"
+    },
+    {
+      "id": "test-3",
+      "name": "Ustadz Ahmad Fauzan",
+      "age": 35,
+      "city": "Medan",
+      "text": "Sebagai pembimbing jamaah mandiri, saya sangat terbantu dengan kesiapan operasional AlHaramain. Penyaluran visa kilat, pendaftaran jadwal Raudhah (Tasreeh) lancar tanpa kendala, dan bus ziarah yang bersih serta dingin ber-AC mumpuni. Nilai kesempurnaan bintang lima.",
+      "packageTaken": "Paket VIP Sultan",
+      "rating": 5,
+      "date": "Januari 2026"
+    },
+    {
+      "id": "test-4",
+      "name": "Siti Rahmawati",
+      "age": 29,
+      "city": "Tangerang",
+      "text": "Pertama kali umroh sendirian sempat merasa cemas. Untungnya group pendampingan whatsapp aktif sejak sebelum berangkat. Teman kamar sekamar dari jamaah hemat sangat akrab. Pelayanan muthawwif wanita (Muthawwifah) membimbing kami berziarah pilar-pilar wanita di Raudhah dengan aman.",
+      "packageTaken": "Paket Umrah Syawal",
+      "rating": 5,
+      "date": "Mei 2026"
+    }
+  ],
+  "stepsToRegister": [
+    {
+      "step": "01",
+      "title": "Pilih Paket & Konsultasi",
+      "desc": "Tentukan paket impian yang sesuai jadwal & anggaran Anda. Hubungi kami via WA/Telepon untuk konsultasi kuota tersedia."
+    },
+    {
+      "step": "02",
+      "title": "Membayar DP & Amankan Seat",
+      "desc": "Bayar uang muka (DP) sebesar Rp 5.000.000,- untuk booking tiket pesawat & asuransi. Kirimkan foto lembar pertama paspor Anda."
+    },
+    {
+      "step": "03",
+      "title": "Lengkapi Dokumen & Firasat",
+      "desc": "Kumpulkan paspor fisik, pasfoto, buku nikah/kartu keluarga ke kantor kami. Tim kami akan memproses Visa & Tasreeh Raudhah Anda."
+    },
+    {
+      "step": "04",
+      "title": "Manasik & Pelunasan",
+      "desc": "Ikuti pembekalan manasik intensif baik teori & praktek ibadah. Lakukan pelunasan sisa biaya paket maksimal 45 hari sebelum terbang."
+    },
+    {
+      "step": "05",
+      "title": "Safar Keberangkatan",
+      "desc": "Berkumpul di Bandara Soekarno-Hatta sesuai instruksi. Nikmati safar ibadah yang khusyuk, aman, & dipandu muthawwif bersertifikat."
+    }
+  ],
+  "requirementsDocuments": [
+    {
+      "title": "Paspor Asli",
+      "detail": "Masa berlaku paspor minimal 8 bulan sebelum jadwal terbang. Nama di paspor minimal terdiri dari 2 kata (contoh: Ahmad Zaki)."
+    },
+    {
+      "title": "KTP & Kartu Keluarga (KK)",
+      "detail": "Salinan KTP berwarna dan KK asli untuk keperluan pengurusan visa umrah & asuransi kesehatan kerajaan Saudi."
+    },
+    {
+      "title": "Pasfoto Terbaru",
+      "detail": "Ukuran foto 4x6 sebanyak 4 lembar dengan latar belakang putih, rasio fokus wajah 80%, tidak mengenakan kacamata hitam/seragam dinas."
+    },
+    {
+      "title": "Buku Nikah & Akta Lahir",
+      "detail": "Asli Buku Nikah untuk pasangan suami istri, atau Akta Lahir asli untuk anak di bawah umur yang ikut serta dalam rombongan."
+    }
+  ],
+  "footer": {
+    "brandTitle": "AL-HARAMAIN",
+    "brandSubtitle": "Umrah & Haji Premium",
+    "description": "Penyelenggara Perjalanan Ibadah Umrah resmi terpercaya di bawah PT Al-Haramain Mulia Wisata. Khidmat, aman, dan mutlak sesuai sunnah Rasulullah SAW.",
+    "quickLinks": [
+      {
+        "label": "Beranda Utama",
+        "target": "hero-section"
+      },
+      {
+        "label": "Legalitas Izin",
+        "target": "legality-section"
+      },
+      {
+        "label": "Paket Rencana",
+        "target": "packages-section"
+      },
+      {
+        "label": "Kalkulator Biaya",
+        "target": "calc-section"
+      },
+      {
+        "label": "Syarat & Langkah",
+        "target": "req-section"
+      },
+      {
+        "label": "Tanya Jawab (FAQ)",
+        "target": "faq-section"
+      }
+    ],
+    "bottomLinks": [
+      {
+        "label": "Syarat & Ketentuan",
+        "url": "#"
+      },
+      {
+        "label": "Kebijakan Privasi",
+        "url": "#"
+      },
+      {
+        "label": "Manajemen Mutu",
+        "url": "#"
+      }
+    ],
+    "copyrightText": "Hak Cipta Dilindungi Undang-Undang."
+  }
+}
