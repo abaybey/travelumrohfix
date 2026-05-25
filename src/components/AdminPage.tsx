@@ -468,6 +468,19 @@ export default function AdminPage() {
                   />
                 </div>
 
+                <div>
+                  <label className="block text-[11px] font-bold text-bento-green uppercase tracking-wide mb-1.5">Link Foto Banner Hero (Makkah Image URL)</label>
+                  <input 
+                    type="text" 
+                    value={hero.meccaImage || ""}
+                    onChange={(e) => setHero({ ...hero, meccaImage: e.target.value })}
+                    placeholder="https://example.com/mecca.jpg"
+                    className="w-full px-4 py-2.5 border border-bento-border rounded-xl text-sm focus:outline-none focus:border-bento-gold text-bento-darkbrown"
+                  />
+                  <p className="text-[10px] text-bento-brown mt-1">Tempelkan tautan (URL) gambar langsung dari internet untuk mengubah gambar latar belakang Hero Section.</p>
+                </div>
+
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-[11px] font-bold text-bento-green uppercase tracking-wide mb-1.5">Judul Baris 1</label>
