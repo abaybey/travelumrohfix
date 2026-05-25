@@ -9,7 +9,20 @@ const getLiveData = () => {
   try {
     const raw = window.localStorage.getItem('alharamain_editable_content');
     if (raw) {
-      return JSON.parse(raw);
+      const parsed = JSON.parse(raw);
+      let changed = false;
+      
+      // Self-healing: convert old /src/assets/images paths to /images in localStorage
+      if (parsed.hero && parsed.hero.meccaImage && parsed.hero.meccaImage.startsWith('/src/assets/images/')) {
+        parsed.hero.meccaImage = parsed.hero.meccaImage.replace('/src/assets/images/', '/images/');
+        changed = true;
+      }
+      
+      if (changed) {
+        window.localStorage.setItem('alharamain_editable_content', JSON.stringify(parsed));
+      }
+      
+      return parsed;
     }
   } catch (e) {
     console.error("Error reading localStorage", e);
