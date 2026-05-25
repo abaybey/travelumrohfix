@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from "react";
 import { Calculator, Sparkles, Send, ShieldCheck, Users2, Building2 } from "lucide-react";
-import { companyData } from "../data";
+import { companyData, upgradesData, estimatorConfig } from "../data";
 
 export default function CostEstimator() {
   // Simulator State variables
@@ -11,35 +11,38 @@ export default function CostEstimator() {
   const [addOnVipGear, setAddOnVipGear] = useState<boolean>(false);
   const [addOnPremiumCatering, setAddOnPremiumCatering] = useState<boolean>(true);
 
-  // Price matrix calculation
-  const roomMultipliers = {
-    quad: 0,       // Baseline
-    triple: 2000000,
-    double: 4000000,
-    single: 9000000
-  };
+  // Get dynamic upgrade configurations
+  const trainUpgrade = useMemo(() => upgradesData.find((u: any) => u.id === "train") || { name: "Kereta Cepat Haramain (Makkah-Madinah)", desc: "Durasi cuma 2 jam (menghindari letih bus darat 6 jam)", price: 1500000 }, []);
+  const gearUpgrade = useMemo(() => upgradesData.find((u: any) => u.id === "gear") || { name: "Upgrade Perlengkapan Premium Koper Fiber", desc: "Desain fiber koper kokoh premium & kain batik mewah", price: 1200000 }, []);
+  const cateringUpgrade = useMemo(() => upgradesData.find((u: any) => u.id === "catering") || { name: "Catering Full-Board Premium", desc: "Menu makanan internasional prasmanan khusus di hotel", price: 800000 }, []);
 
-  const hotelBaseCosts = {
-    bintang3: 22000000, // cheap-economical
-    bintang4: 28500000, // moderate-comfortable
-    bintang5: 35000000  // luxury premium
-  };
+  // Price matrix calculation
+  const roomMultipliers = estimatorConfig.roomMultipliers;
+  const hotelBaseCosts = estimatorConfig.hotelBaseCosts;
 
   const calculatedPerPerson = useMemo(() => {
     let price = hotelBaseCosts[hotelTier];
     price += roomMultipliers[roomClass];
 
     // Add-on cost additions
-    if (addOnHaramainTrain) price += 1500000;
-    if (addOnVipGear) price += 1200000;
-    if (addOnPremiumCatering) price += 800000;
+    if (addOnHaramainTrain) price += trainUpgrade.price;
+    if (addOnVipGear) price += gearUpgrade.price;
+    if (addOnPremiumCatering) price += cateringUpgrade.price;
 
     return price;
-  }, [roomClass, hotelTier, addOnHaramainTrain, addOnVipGear, addOnPremiumCatering]);
+  }, [roomClass, hotelTier, addOnHaramainTrain, addOnVipGear, addOnPremiumCatering, trainUpgrade.price, gearUpgrade.price, cateringUpgrade.price]);
 
   const calculatedTotal = useMemo(() => {
     return calculatedPerPerson * pilgrimsCount;
   }, [calculatedPerPerson, pilgrimsCount]);
+
+  // Format upgrade price display nicely
+  const formatUpgradePrice = (price: number) => {
+    if (price >= 1000000) {
+      return `+Rp ${(price / 1000000).toFixed(1).replace('.0', '')} Jt`;
+    }
+    return `+Rp ${(price / 1000).toFixed(0)} Ribu`;
+  };
 
   // Format currency to IDR
   const formatIDR = (num: number) => {
@@ -66,9 +69,9 @@ export default function CostEstimator() {
     }[hotelTier];
 
     const upgrades = [];
-    if (addOnHaramainTrain) upgrades.push("Kereta Cepat Haramain (Makkah-Madinah)");
-    if (addOnVipGear) upgrades.push("Upgrade Perlengkapan VIP Koper Fiber");
-    if (addOnPremiumCatering) upgrades.push("Full-Board Catering Premium");
+    if (addOnHaramainTrain) upgrades.push(trainUpgrade.name);
+    if (addOnVipGear) upgrades.push(gearUpgrade.name);
+    if (addOnPremiumCatering) upgrades.push(cateringUpgrade.name);
 
     const message = encodeURIComponent(
       `Assalamualaikum Al-Haramain Umrah,\n\nSaya telah membuat *Simulasi Rencana Umrah Swasta* melalui situs Anda. Berikut detail rencana saya:\n\n` +
@@ -227,10 +230,10 @@ export default function CostEstimator() {
                 </label>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                   {[
-                    { key: "quad", label: "Quad (Berempat)", cost: "Baseline" },
-                    { key: "triple", label: "Triple (Bertiga)", cost: "+Rp 2 Jt" },
-                    { key: "double", label: "Double (Berdua)", cost: "+Rp 4 Jt" },
-                    { key: "single", label: "Single (Sendiri)", cost: "+Rp 9 Jt" }
+                    { key: "quad", label: "Quad (Berempat)", cost: roomMultipliers.quad === 0 ? "Baseline" : `+Rp ${roomMultipliers.quad / 1000000} Jt` },
+                    { key: "triple", label: "Triple (Bertiga)", cost: roomMultipliers.triple === 0 ? "Baseline" : `+Rp ${roomMultipliers.triple / 1000000} Jt` },
+                    { key: "double", label: "Double (Berdua)", cost: roomMultipliers.double === 0 ? "Baseline" : `+Rp ${roomMultipliers.double / 1000000} Jt` },
+                    { key: "single", label: "Single (Sendiri)", cost: roomMultipliers.single === 0 ? "Baseline" : `+Rp ${roomMultipliers.single / 1000000} Jt` }
                   ].map((room) => (
                     <button
                       type="button"
@@ -266,11 +269,11 @@ export default function CostEstimator() {
                         className="w-4 h-4 rounded text-bento-green accent-bento-green"
                       />
                       <div>
-                        <span className="text-xs sm:text-sm font-bold text-bento-green block">Kereta Cepat Haramain (Makkah-Madinah)</span>
-                        <span className="text-[10px] text-bento-brown block leading-tight">Durasi cuma 2 jam (menghindari letih bus darat 6 jam)</span>
+                        <span className="text-xs sm:text-sm font-bold text-bento-green block">{trainUpgrade.name}</span>
+                        <span className="text-[10px] text-bento-brown block leading-tight">{trainUpgrade.desc}</span>
                       </div>
                     </div>
-                    <span className="text-xs font-mono font-bold text-bento-green shrink-0 ml-3">+Rp 1.5 Jt <span className="text-[9px] font-normal text-bento-brown">/pax</span></span>
+                    <span className="text-xs font-mono font-bold text-bento-green shrink-0 ml-3">{formatUpgradePrice(trainUpgrade.price)} <span className="text-[9px] font-normal text-bento-brown">/pax</span></span>
                   </label>
 
                   {/* VIP Gear */}
@@ -283,11 +286,11 @@ export default function CostEstimator() {
                         className="w-4 h-4 rounded text-bento-green accent-bento-green"
                       />
                       <div>
-                        <span className="text-xs sm:text-sm font-bold text-bento-green block">Upgrade Perlengkapan Premium Koper Fiber</span>
-                        <span className="text-[10px] text-bento-brown block leading-tight">Desain fiber koper kokoh premium & kain batik mewah</span>
+                        <span className="text-xs sm:text-sm font-bold text-bento-green block">{gearUpgrade.name}</span>
+                        <span className="text-[10px] text-bento-brown block leading-tight">{gearUpgrade.desc}</span>
                       </div>
                     </div>
-                    <span className="text-xs font-mono font-bold text-bento-green shrink-0 ml-3">+Rp 1.2 Jt <span className="text-[9px] font-normal text-bento-brown">/pax</span></span>
+                    <span className="text-xs font-mono font-bold text-bento-green shrink-0 ml-3">{formatUpgradePrice(gearUpgrade.price)} <span className="text-[9px] font-normal text-bento-brown">/pax</span></span>
                   </label>
 
                   {/* Premium Catering */}
@@ -300,11 +303,11 @@ export default function CostEstimator() {
                         className="w-4 h-4 rounded text-bento-green accent-bento-green"
                       />
                       <div>
-                        <span className="text-xs sm:text-sm font-bold text-bento-green block">Catering Full-Board Premium</span>
-                        <span className="text-[10px] text-bento-brown block leading-tight">Menu makanan internasional prasmanan khusus di hotel</span>
+                        <span className="text-xs sm:text-sm font-bold text-bento-green block">{cateringUpgrade.name}</span>
+                        <span className="text-[10px] text-bento-brown block leading-tight">{cateringUpgrade.desc}</span>
                       </div>
                     </div>
-                    <span className="text-xs font-mono font-bold text-bento-green shrink-0 ml-3">+Rp 800 Ribu <span className="text-[9px] font-normal text-bento-brown">/pax</span></span>
+                    <span className="text-xs font-mono font-bold text-bento-green shrink-0 ml-3">{formatUpgradePrice(cateringUpgrade.price)} <span className="text-[9px] font-normal text-bento-brown">/pax</span></span>
                   </label>
                 </div>
               </div>

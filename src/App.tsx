@@ -58,7 +58,7 @@ export default function App() {
     return () => window.removeEventListener("popstate", handlePopState);
   }, []);
 
-  if (path === "/admin") {
+  if (path.startsWith("/admin")) {
     return <AdminPage />;
   }
 

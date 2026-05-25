@@ -415,5 +415,25 @@
       }
     ],
     "copyrightText": "Hak Cipta Dilindungi Undang-Undang."
-  }
+  },
+  "upgrades": [
+    {
+      "id": "train",
+      "name": "Kereta Cepat Haramain (Makkah-Madinah)",
+      "desc": "Durasi cuma 2 jam (menghindari letih bus darat 6 jam)",
+      "price": 1500000
+    },
+    {
+      "id": "gear",
+      "name": "Upgrade Perlengkapan Premium Koper Fiber",
+      "desc": "Desain fiber koper kokoh premium & kain batik mewah",
+      "price": 1200000
+    },
+    {
+      "id": "catering",
+      "name": "Catering Full-Board Premium",
+      "desc": "Menu makanan internasional prasmanan khusus di hotel",
+      "price": 800000
+    }
+  ]
 }

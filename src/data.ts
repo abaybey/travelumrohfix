@@ -40,6 +40,21 @@ export const stepsToRegister = liveData.stepsToRegister || defaultData.stepsToRe
 export const requirementsDocuments = liveData.requirementsDocuments || defaultData.requirementsDocuments;
 export const heroData = liveData.hero || defaultData.hero;
 export const footerData = liveData.footer || defaultData.footer;
+export const upgradesData = liveData.upgrades || defaultData.upgrades;
+
+export const estimatorConfig = liveData.estimatorConfig || defaultData.estimatorConfig || {
+  hotelBaseCosts: {
+    bintang3: 22000000,
+    bintang4: 28500000,
+    bintang5: 35000000
+  },
+  roomMultipliers: {
+    quad: 0,
+    triple: 2000000,
+    double: 4000000,
+    single: 9000000
+  }
+};
 
 export const legalityData = liveData.legality || {
   title1: "Ibadah Tenang, Fasilitas Nyaman &",

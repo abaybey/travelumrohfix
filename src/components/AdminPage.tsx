@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { 
   Lock, User, Plus, Trash2, Edit, Save, LogOut, Globe, Building, Layout, 
-  Award, FileText, CheckCircle2, MessageSquare, HelpCircle, Download, ArrowLeft, Star, Link
+  Award, FileText, CheckCircle2, MessageSquare, HelpCircle, Download, ArrowLeft, Star, RefreshCw, Link, Calculator
 } from "lucide-react";
 import { 
   companyData, heroData, legalityData, umrahPackages, faqData, 
-  testimonialData, stepsToRegister, requirementsDocuments, footerData, saveLiveData 
+  testimonialData, stepsToRegister, requirementsDocuments, footerData, saveLiveData, estimatorConfig, upgradesData 
 } from "../data";
 
 export default function AdminPage() {
@@ -32,6 +32,8 @@ export default function AdminPage() {
   const [testimonials, setTestimonials] = useState(testimonialData);
   const [steps, setSteps] = useState(stepsToRegister);
   const [requirements, setRequirements] = useState(requirementsDocuments);
+  const [estimator, setEstimator] = useState(estimatorConfig);
+  const [upgrades, setUpgrades] = useState(upgradesData);
   const [footer, setFooter] = useState(footerData);
 
   // Status State
@@ -72,7 +74,9 @@ export default function AdminPage() {
       testimonialData: testimonials,
       stepsToRegister: steps,
       requirementsDocuments: requirements,
-      footer
+      estimatorConfig: estimator,
+      upgrades: upgrades,
+      footer,
     };
 
     const success = await saveLiveData(payload);
@@ -102,7 +106,9 @@ export default function AdminPage() {
       testimonialData: testimonials,
       stepsToRegister: steps,
       requirementsDocuments: requirements,
-      footer
+      estimatorConfig: estimator,
+      upgrades: upgrades,
+      footer,
     };
     const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(payload, null, 2));
     const downloadAnchor = document.createElement("a");
@@ -111,6 +117,14 @@ export default function AdminPage() {
     document.body.appendChild(downloadAnchor);
     downloadAnchor.click();
     downloadAnchor.remove();
+  };
+
+  // Reset to last saved state
+  const handleReset = () => {
+    if (confirm("Apakah Anda yakin ingin membatalkan semua perubahan dan kembali ke data yang terakhir disimpan?")) {
+      window.localStorage.removeItem("alharamain_editable_content");
+      window.location.reload();
+    }
   };
 
   // Package Edit/Add Helpers
@@ -264,6 +278,14 @@ export default function AdminPage() {
             <span>Ekspor JSON</span>
           </button>
           <button 
+            onClick={handleReset}
+            className="px-4 py-2 bg-red-900/10 hover:bg-red-900/20 text-red-600 border border-red-500/20 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer"
+            title="Batalkan Perubahan"
+          >
+            <RefreshCw className="w-3.5 h-3.5" />
+            <span>Reset</span>
+          </button>
+          <button 
             onClick={handleSaveAll}
             disabled={saveStatus === "saving"}
             className="px-5 py-2.5 bg-bento-gold hover:bg-yellow-500 text-bento-green rounded-xl text-xs font-black shadow-md transition-all flex items-center gap-1.5 cursor-pointer disabled:opacity-50"
@@ -291,6 +313,7 @@ export default function AdminPage() {
             { id: "hero", label: "Hero Banner & Stat", icon: <Layout className="w-4 h-4" /> },
             { id: "legality", label: "Legalitas & 5 Pasti", icon: <Award className="w-4 h-4" /> },
             { id: "packages", label: "Paket Pilihan Umroh", icon: <Globe className="w-4 h-4" /> },
+            { id: "estimator", label: "Kalkulator & Upgrade", icon: <Calculator className="w-4 h-4" /> },
             { id: "steps", label: "Alur Pendaftaran", icon: <CheckCircle2 className="w-4 h-4" /> },
             { id: "docs", label: "Persyaratan Dokumen", icon: <FileText className="w-4 h-4" /> },
             { id: "testimonials", label: "Testimoni Jamaah", icon: <MessageSquare className="w-4 h-4" /> },
@@ -988,6 +1011,136 @@ export default function AdminPage() {
                   </div>
                 </div>
               )}
+            </div>
+          )}
+
+          {/* TAB: Estimator & Upgrades */}
+          {activeTab === "estimator" && (
+            <div className="space-y-6">
+              <div className="border-b border-bento-border pb-4 mb-4">
+                <h2 className="text-xl font-serif font-bold text-bento-green">Kalkulator Safar & Upgrades</h2>
+                <p className="text-xs text-bento-brown font-light mt-0.5">Edit harga dasar hotel, tambahan tipe kamar, dan daftar layanan upgrade opsional.</p>
+              </div>
+
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-sm font-bold text-bento-green uppercase tracking-wide mb-3">Harga Dasar Hotel</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div>
+                      <label className="block text-[11px] font-bold text-bento-green mb-1.5">Bintang 3 (Rp)</label>
+                      <input 
+                        type="number" 
+                        value={estimator.hotelBaseCosts.bintang3}
+                        onChange={(e) => setEstimator({ ...estimator, hotelBaseCosts: { ...estimator.hotelBaseCosts, bintang3: parseInt(e.target.value) || 0 } })}
+                        className="w-full px-4 py-2 border border-bento-border rounded-xl text-sm focus:outline-none focus:border-bento-gold text-bento-darkbrown"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-[11px] font-bold text-bento-green mb-1.5">Bintang 4 (Rp)</label>
+                      <input 
+                        type="number" 
+                        value={estimator.hotelBaseCosts.bintang4}
+                        onChange={(e) => setEstimator({ ...estimator, hotelBaseCosts: { ...estimator.hotelBaseCosts, bintang4: parseInt(e.target.value) || 0 } })}
+                        className="w-full px-4 py-2 border border-bento-border rounded-xl text-sm focus:outline-none focus:border-bento-gold text-bento-darkbrown"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-[11px] font-bold text-bento-green mb-1.5">Bintang 5 (Rp)</label>
+                      <input 
+                        type="number" 
+                        value={estimator.hotelBaseCosts.bintang5}
+                        onChange={(e) => setEstimator({ ...estimator, hotelBaseCosts: { ...estimator.hotelBaseCosts, bintang5: parseInt(e.target.value) || 0 } })}
+                        className="w-full px-4 py-2 border border-bento-border rounded-xl text-sm focus:outline-none focus:border-bento-gold text-bento-darkbrown"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="border-t border-bento-border pt-4">
+                  <h3 className="text-sm font-bold text-bento-green uppercase tracking-wide mb-3">Biaya Tambahan Tipe Kamar</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div>
+                      <label className="block text-[11px] font-bold text-bento-green mb-1.5">Triple (Bertiga)</label>
+                      <input 
+                        type="number" 
+                        value={estimator.roomMultipliers.triple}
+                        onChange={(e) => setEstimator({ ...estimator, roomMultipliers: { ...estimator.roomMultipliers, triple: parseInt(e.target.value) || 0 } })}
+                        className="w-full px-4 py-2 border border-bento-border rounded-xl text-sm focus:outline-none focus:border-bento-gold text-bento-darkbrown"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-[11px] font-bold text-bento-green mb-1.5">Double (Berdua)</label>
+                      <input 
+                        type="number" 
+                        value={estimator.roomMultipliers.double}
+                        onChange={(e) => setEstimator({ ...estimator, roomMultipliers: { ...estimator.roomMultipliers, double: parseInt(e.target.value) || 0 } })}
+                        className="w-full px-4 py-2 border border-bento-border rounded-xl text-sm focus:outline-none focus:border-bento-gold text-bento-darkbrown"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-[11px] font-bold text-bento-green mb-1.5">Single (Sendiri)</label>
+                      <input 
+                        type="number" 
+                        value={estimator.roomMultipliers.single}
+                        onChange={(e) => setEstimator({ ...estimator, roomMultipliers: { ...estimator.roomMultipliers, single: parseInt(e.target.value) || 0 } })}
+                        className="w-full px-4 py-2 border border-bento-border rounded-xl text-sm focus:outline-none focus:border-bento-gold text-bento-darkbrown"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="border-t border-bento-border pt-4">
+                  <h3 className="text-sm font-bold text-bento-green uppercase tracking-wide mb-3">Layanan Tambahan (Upgrades)</h3>
+                  <div className="space-y-4">
+                    {upgrades.map((upg: any, idx: number) => (
+                      <div key={upg.id} className="bg-bento-cream/20 p-4 border border-bento-border rounded-2xl space-y-2">
+                        <div className="flex gap-4">
+                          <div className="flex-1">
+                            <label className="block text-[10px] font-bold text-bento-green uppercase mb-1">Nama Upgrade</label>
+                            <input 
+                              type="text" 
+                              value={upg.name}
+                              onChange={(e) => {
+                                const newU = [...upgrades];
+                                newU[idx].name = e.target.value;
+                                setUpgrades(newU);
+                              }}
+                              className="w-full px-3 py-1.5 text-xs border border-bento-border rounded-lg text-bento-green focus:border-bento-gold"
+                            />
+                          </div>
+                          <div className="w-1/3">
+                            <label className="block text-[10px] font-bold text-bento-green uppercase mb-1">Harga (Rp)</label>
+                            <input 
+                              type="number" 
+                              value={upg.price}
+                              onChange={(e) => {
+                                const newU = [...upgrades];
+                                newU[idx].price = parseInt(e.target.value) || 0;
+                                setUpgrades(newU);
+                              }}
+                              className="w-full px-3 py-1.5 text-xs border border-bento-border rounded-lg text-bento-green focus:border-bento-gold"
+                            />
+                          </div>
+                        </div>
+                        <div>
+                          <label className="block text-[10px] font-bold text-bento-green uppercase mb-1">Deskripsi Pendek</label>
+                          <input 
+                            type="text" 
+                            value={upg.desc}
+                            onChange={(e) => {
+                              const newU = [...upgrades];
+                              newU[idx].desc = e.target.value;
+                              setUpgrades(newU);
+                            }}
+                            className="w-full px-3 py-1.5 text-xs border border-bento-border rounded-lg text-bento-green focus:border-bento-gold"
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+              </div>
             </div>
           )}
 
